@@ -29,28 +29,28 @@
         <section id="recherche" class="search-section">
             <h2>Rechercher un pays</h2>
 
-            <form class="search-form">
+            <form id="formulaire-recherche" class="search-form">
                 <div class="form-field">
-                    <label for="pays">Nom du pays</label>
+                    <label for="recherche-pays">Nom du pays</label>
 
                     <input
                         type="search"
-                        id="pays"
-                        name="pays"
+                        id="recherche-pays"
+                        name="recherche-pays"
                         placeholder="Exemple : France"
                     >
                 </div>
 
                 <div class="form-field">
-                    <label for="region">Région</label>
+                    <label for="filtre-region">Région</label>
 
-                    <select id="region" name="region">
+                    <select id="filtre-region" name="filtre-region">
                         <option value="">Toutes les régions</option>
-                        <option value="afrique">Afrique</option>
-                        <option value="amerique">Amérique</option>
-                        <option value="asie">Asie</option>
-                        <option value="europe">Europe</option>
-                        <option value="oceanie">Océanie</option>
+                        <option value="Afrique">Afrique</option>
+                        <option value="Amérique">Amérique</option>
+                        <option value="Asie">Asie</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Océanie">Océanie</option>
                     </select>
                 </div>
 
@@ -63,37 +63,26 @@
         <section id="resultats" class="results-section">
             <h2>Résultats</h2>
 
-            <p class="results-status" role="status" aria-live="polite">
-                3 pays trouvés
+            <p id="statut-resultats" class="results-status" role="status">
+                Chargement des pays…
             </p>
 
-            <div class="country-grid">
-                <article class="country-card">
-                    <h3>France</h3>
-                    <p><strong>Capitale :</strong> Paris</p>
-                    <p><strong>Région :</strong> Europe</p>
-                    <p><strong>Population :</strong> environ 68 millions</p>
-                </article>
-
-                <article class="country-card">
-                    <h3>Japon</h3>
-                    <p><strong>Capitale :</strong> Tokyo</p>
-                    <p><strong>Région :</strong> Asie</p>
-                    <p><strong>Population :</strong> environ 123 millions</p>
-                </article>
-
-                <article class="country-card">
-                    <h3>Brésil</h3>
-                    <p><strong>Capitale :</strong> Brasília</p>
-                    <p><strong>Région :</strong> Amérique</p>
-                    <p><strong>Population :</strong> environ 203 millions</p>
-                </article>
-            </div>
+            <div id="liste-pays" class="country-grid"></div>
         </section>
+
+        <section
+            id="detail-pays"
+            class="country-detail"
+            aria-live="polite"
+            tabindex="-1"
+            hidden
+        ></section>
     </main>
 
     <footer class="site-footer">
         <p>ExploMonde</p>
     </footer>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
