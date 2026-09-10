@@ -1,0 +1,7 @@
+Défauts d’accessibilité vérifiés et corrigés :
+- Le titre de la page devait décrire clairement son contenu.
+- Il manquait un lien permettant d’accéder directement au contenu principal.
+- Le label du champ de recherche devait être associé à l’input avec for et id.
+- Il manquait une zone role="status" pour annoncer le nombre de résultats.
+- Tous les éléments interactifs ont été testés avec la touche Tab.
+- Le focus du clavier reste visible sur chaque élément interactif.

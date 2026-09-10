@@ -3,74 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExploMonde</title>
+
+    <title>ExploMonde — Recherche de pays</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
-    <header>
-        <h1>ExploMonde</h1>
+    <a class="skip-link" href="#contenu-principal">
+        Aller directement au contenu principal
+    </a>
 
-        <nav>
+    <header class="site-header">
+        <h1 class="site-title">ExploMonde</h1>
+
+        <nav class="main-navigation" aria-label="Navigation principale">
             <a href="#recherche">Rechercher</a>
             <a href="#resultats">Résultats</a>
         </nav>
     </header>
 
-    <main>
-        <section id="recherche">
+    <main id="contenu-principal" class="page-content" tabindex="-1">
+        <section id="recherche" class="search-section">
             <h2>Rechercher un pays</h2>
 
-            <form>
-                <label for="pays">Nom du pays</label>
-                <input
-                    type="search"
-                    id="pays"
-                    name="pays"
-                    placeholder="Rechercher un pays"
-                >
+            <form class="search-form">
+                <div class="form-field">
+                    <label for="pays">Nom du pays</label>
 
-                <label for="region">Région</label>
-                <select id="region" name="region">
-                    <option value="">Toutes les régions</option>
-                    <option value="afrique">Afrique</option>
-                    <option value="amerique">Amérique</option>
-                    <option value="asie">Asie</option>
-                    <option value="europe">Europe</option>
-                    <option value="oceanie">Océanie</option>
-                </select>
+                    <input
+                        type="search"
+                        id="pays"
+                        name="pays"
+                        placeholder="Exemple : France"
+                    >
+                </div>
 
-                <button type="submit">Rechercher</button>
+                <div class="form-field">
+                    <label for="region">Région</label>
+
+                    <select id="region" name="region">
+                        <option value="">Toutes les régions</option>
+                        <option value="afrique">Afrique</option>
+                        <option value="amerique">Amérique</option>
+                        <option value="asie">Asie</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceanie">Océanie</option>
+                    </select>
+                </div>
+
+                <button class="primary-button" type="submit">
+                    Rechercher
+                </button>
             </form>
         </section>
 
-        <section id="resultats">
+        <section id="resultats" class="results-section">
             <h2>Résultats</h2>
 
-            <article>
-                <h3>France</h3>
-                <p>Capitale : Paris</p>
-                <p>Région : Europe</p>
-                <p>Population : environ 68 millions d’habitants</p>
-            </article>
+            <p class="results-status" role="status" aria-live="polite">
+                3 pays trouvés
+            </p>
 
-            <article>
-                <h3>Japon</h3>
-                <p>Capitale : Tokyo</p>
-                <p>Région : Asie</p>
-                <p>Population : environ 123 millions d’habitants</p>
-            </article>
+            <div class="country-grid">
+                <article class="country-card">
+                    <h3>France</h3>
+                    <p><strong>Capitale :</strong> Paris</p>
+                    <p><strong>Région :</strong> Europe</p>
+                    <p><strong>Population :</strong> environ 68 millions</p>
+                </article>
 
-            <article>
-                <h3>Brésil</h3>
-                <p>Capitale : Brasília</p>
-                <p>Région : Amérique</p>
-                <p>Population : environ 203 millions d’habitants</p>
-            </article>
+                <article class="country-card">
+                    <h3>Japon</h3>
+                    <p><strong>Capitale :</strong> Tokyo</p>
+                    <p><strong>Région :</strong> Asie</p>
+                    <p><strong>Population :</strong> environ 123 millions</p>
+                </article>
+
+                <article class="country-card">
+                    <h3>Brésil</h3>
+                    <p><strong>Capitale :</strong> Brasília</p>
+                    <p><strong>Région :</strong> Amérique</p>
+                    <p><strong>Population :</strong> environ 203 millions</p>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>ExploMonde - Projet étudiant</p>
+    <footer class="site-footer">
+        <p>ExploMonde</p>
     </footer>
 </body>
 </html>
