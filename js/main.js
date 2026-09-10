@@ -75,8 +75,6 @@ function afficherErreur(erreur) {
 
     boutonReessayer.hidden = false;
     detailPays.hidden = true;
-
-    console.error(erreur);
 }
 
 async function executerRequete(requete) {

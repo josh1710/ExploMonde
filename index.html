@@ -9,7 +9,8 @@
     >
 
     <title>ExploMonde — Recherche de pays</title>
-
+    <meta name="description" content="ExploMonde permet de rechercher et de découvrir les pays du monde, leurs capitales, leurs régions et leurs populations.">
+    <link rel="preconnect" href="https://api.restcountries.com" crossorigin >   
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
@@ -126,13 +127,7 @@
             ></div>
         </section>
 
-        <section
-            id="detail-pays"
-            class="country-detail"
-            aria-live="polite"
-            tabindex="-1"
-            hidden
-        ></section>
+        <div id="detail-pays" class="country-detail" aria-live="polite" tabindex="-1" hidden></div>
     </main>
 
     <footer class="site-footer">
