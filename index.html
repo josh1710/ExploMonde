@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploMonde</title>
+</head>
+
+<body>
+    <header>
+        <h1>ExploMonde</h1>
+
+        <nav>
+            <a href="#recherche">Rechercher</a>
+            <a href="#resultats">Résultats</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recherche">
+            <h2>Rechercher un pays</h2>
+
+            <form>
+                <label for="pays">Nom du pays</label>
+                <input
+                    type="search"
+                    id="pays"
+                    name="pays"
+                    placeholder="Rechercher un pays"
+                >
+
+                <label for="region">Région</label>
+                <select id="region" name="region">
+                    <option value="">Toutes les régions</option>
+                    <option value="afrique">Afrique</option>
+                    <option value="amerique">Amérique</option>
+                    <option value="asie">Asie</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceanie">Océanie</option>
+                </select>
+
+                <button type="submit">Rechercher</button>
+            </form>
+        </section>
+
+        <section id="resultats">
+            <h2>Résultats</h2>
+
+            <article>
+                <h3>France</h3>
+                <p>Capitale : Paris</p>
+                <p>Région : Europe</p>
+                <p>Population : environ 68 millions d’habitants</p>
+            </article>
+
+            <article>
+                <h3>Japon</h3>
+                <p>Capitale : Tokyo</p>
+                <p>Région : Asie</p>
+                <p>Population : environ 123 millions d’habitants</p>
+            </article>
+
+            <article>
+                <h3>Brésil</h3>
+                <p>Capitale : Brasília</p>
+                <p>Région : Amérique</p>
+                <p>Population : environ 203 millions d’habitants</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>ExploMonde - Projet étudiant</p>
+    </footer>
+</body>
+</html>
