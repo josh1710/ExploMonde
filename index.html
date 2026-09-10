@@ -2,7 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>ExploMonde — Recherche de pays</title>
 
@@ -19,42 +23,76 @@
     <header class="site-header">
         <h1 class="site-title">ExploMonde</h1>
 
-        <nav class="main-navigation" aria-label="Navigation principale">
+        <nav
+            class="main-navigation"
+            aria-label="Navigation principale"
+        >
             <a href="#recherche">Rechercher</a>
             <a href="#resultats">Résultats</a>
         </nav>
     </header>
 
-    <main id="contenu-principal" class="page-content" tabindex="-1">
+    <main
+        id="contenu-principal"
+        class="page-content"
+        tabindex="-1"
+    >
         <section id="recherche" class="search-section">
             <h2>Rechercher un pays</h2>
 
-            <form id="formulaire-recherche" class="search-form">
+            <form
+                id="formulaire-recherche"
+                class="search-form"
+            >
                 <div class="form-field">
-                    <label for="recherche-pays">Nom du pays</label>
+                    <label for="recherche-pays">
+                        Nom du pays
+                    </label>
 
                     <input
                         type="search"
                         id="recherche-pays"
                         name="recherche-pays"
                         placeholder="Exemple : France"
+                        autocomplete="off"
                     >
                 </div>
 
                 <div class="form-field">
-                    <label for="filtre-region">Région</label>
+                    <label for="filtre-region">
+                        Région
+                    </label>
 
-                    <select id="filtre-region" name="filtre-region">
-                        <option value="">Toutes les régions</option>
-                        <option value="Afrique">Afrique</option>
-                        <option value="Amérique">Amérique</option>
-                        <option value="Asie">Asie</option>
-                        <option value="Europe">Europe</option>
-                        <option value="Océanie">Océanie</option>
+                    <select
+                        id="filtre-region"
+                        name="filtre-region"
+                    >
+                        <option value="europe" selected>
+                            Europe
+                        </option>
+
+                        <option value="africa">
+                            Afrique
+                        </option>
+
+                        <option value="americas">
+                            Amérique
+                        </option>
+
+                        <option value="asia">
+                            Asie
+                        </option>
+
+                        <option value="oceania">
+                            Océanie
+                        </option>
                     </select>
                 </div>
 
-                <button class="primary-button" type="submit">
+                <button
+                    class="primary-button"
+                    type="submit"
+                >
                     Rechercher
                 </button>
             </form>
@@ -63,11 +101,29 @@
         <section id="resultats" class="results-section">
             <h2>Résultats</h2>
 
-            <p id="statut-resultats" class="results-status" role="status">
+            <p
+                id="statut-resultats"
+                class="results-status"
+                role="status"
+                aria-live="polite"
+            >
                 Chargement des pays…
             </p>
 
-            <div id="liste-pays" class="country-grid"></div>
+            <button
+                id="bouton-reessayer"
+                class="primary-button"
+                type="button"
+                hidden
+            >
+                Réessayer
+            </button>
+
+            <div
+                id="liste-pays"
+                class="country-grid"
+                aria-busy="true"
+            ></div>
         </section>
 
         <section
